@@ -1,6 +1,9 @@
+/* Bootstrap either has nothing to do margins on rows, or I've always missed it */
 .header {
     margin-bottom:15px;
 }
+/* Fix the size of the background, and make sure it remains centered if we resize the page.
+Also add relative positioning for the menu */
 .header .background {
     height:200px;
     background:url(http://lorempixel.com/1140/200) 50% 50%;
@@ -13,9 +16,12 @@
     height:200px;
     background:url(http://lorempixel.com/1140/200/business/2) 50% 50%;
 }
+/* Normally want these to be a bit separate from the images above and below */
 .text-content {
     margin:15px 0;
 }
+/* Depending on the content of the header I might do this differently. The header is empty now though,
+and I want to keep the menu at the bottom. */
 .navigation {
     position:absolute;
     bottom:0px;
@@ -25,12 +31,15 @@
     width:100%;
 }
 
+/* Do not do top margin if text is displayed next to images instead of underneath */
 @media (min-width: 768px) and (max-width: 1200px) {
     .text-content {
         margin: 0 0 15px 0;
     }
 }
 
+/* Mobile layout has slightly smaller headers. Might want to make them completely different
+(or, if using bootstrap navbar, you don't need this at all) */
 @media (max-width:768px) {
     .header .background {
         height:100px;
@@ -38,6 +47,7 @@
     .footer .background {
         height:100px;
     }
+    /* Center images on mobile layout, left aligned looks pretty ugly */
     .image-content {
         text-align:center;
     }

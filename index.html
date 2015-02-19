@@ -3,15 +3,22 @@
 <head>
     <title>Odigo Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Don't mess with the scale of the website on mobile, that's what we're creating a responsive layout for. -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Bootstrap! It does most of the things that I want done in the basic design, after that it's just refinement. -->
     <link rel="stylesheet" href="style.css">
+    <!-- Could have included the styles inline, but that makes the file annoyingly large to work with, this is best practice too. -->
 </head>
 <body>
 <div class="container">
+    <!-- Should have used the header tag here instead, but I'm still adjusting -->
     <div class="row header">
         <div class="col-lg-12">
+            <!-- This structure could possibly be different, but it allows me to manipulate the contents of the header seperately from the grid system. -->
             <div class="background">
+                <!-- Not sure if this was meant to happen, but navigation disappears on mobile. Can use bootstrap navbar to do something more awesome. -->
                 <div class="navigation hidden-xs">
+                    <!-- Literally copy/pasted bootstrap example navigation, no sense in redoing what works -->
                     <ul class="nav nav-pills">
                         <li role="presentation" class="active"><a href="#">Home</a></li>
                         <li role="presentation"><a href="#">Profile</a></li>
@@ -22,6 +29,8 @@
         </div>
     </div>
     <div class="row">
+        <!-- It's all the same! Normally use some template engine to only make one copy of these things -->
+        <!-- Bootstrap grid system at work mainly, only two classes on the content containers to give them specific styling -->
         <div class="col-lg-3 col-sm-6">
             <div class="row">
                 <div class="col-lg-12 col-sm-6 image-content"><img class="img-thumbnail img-responsive"
@@ -119,6 +128,7 @@
             </div>
         </div>
     </div>
+    <!-- Footer could be completely different if it actually had content (three/four columns of links?), but this works for positioning -->
     <div class="row footer">
         <div class="background"></div>
     </div>
