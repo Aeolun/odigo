@@ -1,0 +1,23 @@
+.header {
+    margin-bottom:15px;
+}
+.footer {
+    margin-top:15px;
+}
+.text-content {
+    margin:15px 0;
+}
+.navigation {
+    position:absolute;
+    bottom:0px;
+    left:15px;
+    background:rgba(255,255,255,0.7);
+    padding:15px;
+    width:100%;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .text-content {
+        margin: 0 0 15px 0;
+    }
+}
